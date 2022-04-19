@@ -1,0 +1,115 @@
+<style type="text/css">
+	body{
+		margin: 0;
+		background-color: black;
+	}
+	#gameOver{
+		width: 300px;
+		height: 200px;
+		position: fixed;
+		margin-left:200px;
+		z-index: 3;
+	}
+	.scoreBlock{
+		position: fixed;
+		color: white;
+		margin-left: 30px;
+		margin-top: 30px;   
+		font-size: 25px;
+		font-family: cursive;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+	}
+	.restartBlock{
+		position: fixed;
+		
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+	}
+	.innerBlock{
+		background-color: white;
+		width: 40%;
+		height: 40%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap:5px;
+		border-radius: 20px;
+		font-family: cursive;
+		flex-wrap: wrap;
+	}
+
+   .finalScore{
+   	margin-top:20px; 
+   	font-size: 60px;
+   	font-weight: 900;
+
+   }
+   .point{
+   	font-size: 30px;
+   }
+   .buttonBlock{
+   	width: 100%;
+   	margin-top: 20px;
+   }
+   #button{
+   	width: 80%;
+   	background-color: green;
+   	border:0;
+   	border-radius: 20px;
+   	padding: 20px;
+   	color:white;
+   	font-size: 15px;
+   	font-weight: 800;
+   }
+
+ @media (min-width: 320px) and (max-width: 480px) {
+  
+  .innerBlock{
+		background-color: white;
+		width: 40%;
+		height: 20%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap:5px;
+		border-radius: 20px;
+		font-family: cursive;
+		flex-wrap: wrap;
+	}
+
+  
+}
+    
+</style>
+
+<div class="scoreBlock">
+ <span>Score: </span><span id = "scoreNum">0</span>	
+</div>
+<div class="restartBlock" id="restartBlock">
+	<div class="innerBlock" >
+		<span class="finalScore" id = "finalScore">0</span>
+		<span class="point">points</span>
+		<div class="buttonBlock">
+		<button type="" id="button">Start Game</button>	
+		</div>
+	</div>
+</div>
+<canvas id="canvas" >
+	
+	</canvas>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./index.js"></script>
